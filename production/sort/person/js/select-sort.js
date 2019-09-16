@@ -1,8 +1,12 @@
-function selectSort(list, count) {
+/**
+ * created by 2019-09-15
+ * 选择排序
+ */
+function selectSort(list, n) {
     var pos;
-    for(var i = 0; i < count; i++) {
+    for(var i = 0; i < n; i++) {
         pos = i;
-        for(var j = i + 1; j < count; j++) {
+        for(var j = i + 1; j < n; j++) {
             if(list[pos] > list[j]) {
                 pos = j;
             }
