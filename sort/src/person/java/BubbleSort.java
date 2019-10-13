@@ -15,13 +15,19 @@ public class BubbleSort {
     }
 
     private static void bubbleSort(int []list, int n) {
+        boolean flag = true; //判断是否已经排好序
         for(int i = 0; i < n; i++) {
+            flag = true;
             for (int j = n - 1; j > i; j--) {
                 if (list[j] < list[j - 1]) {
                     int tmp = list[j];
                     list[j] = list[j - 1];
                     list[j - 1] = tmp;
+                    flag = false;
                 }
+            }
+            if(flag) {
+                break;
             }
         }
     }
